@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "Trents Iready Overloader",
+  "icons": { 
+    "140": "alabama.png"
+  },
+  "version": "0.1.18",
+  "description": "based iready cheat",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+  {
+    "js": ["main.js"],
+    "matches": ["*://login.i-ready.com/student/dashboard/home"]
+  }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  }
+}
